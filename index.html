@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMX Logic | Agentic AI Systems Engineering</title>
+    <meta name="description" content="Systems engineering firm deploying Agentic AI for gyms and local businesses.">
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo_transparent.png" alt="CMX Logic Logo" class="nav-logo-img" id="navLogo">
+                <div class="logo-text">Logic</div>
+            </div>
+            <div class="nav-links">
+                <a href="#services" class="nav-anchor">Systems</a>
+                <a href="#industries" class="nav-anchor">Industries</a>
+                <a href="#pricing" class="nav-anchor">Pricing</a>
+                <button id="themeToggle" class="btn btn-icon" aria-label="Toggle Theme">
+                    <i data-lucide="sun" id="themeIcon"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary nav-btn">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Apple-Style Hero Pin Section -->
+    <div class="apple-hero-wrapper" id="home">
+        <div class="hero-bg-apple"></div>
+        <div class="hero-content-apple">
+            <h1 class="massive-apple-text">
+                <span class="word w1">Connect.</span> 
+                <span class="word w2">Move.</span> 
+                <span class="word w3">Execute.</span>
+            </h1>
+            <p class="hero-sub-apple">We deploy Agentic AI and intelligent workflows that run your business on autopilot.</p>
+        </div>
+    </div>
+
+    <!-- Cinematic Manifesto Section -->
+    <section class="manifesto-section" id="manifesto">
+        <div class="manifesto-container">
+            <h2 class="manifesto-line m1">Growth is not a marketing problem.</h2>
+            <h2 class="manifesto-line m2 text-gradient">It is a systems engineering problem.</h2>
+        </div>
+    </section>
+
+    <!-- Systems Grid Section -->
+    <section class="systems-section section-padding" id="services">
+        <div class="container text-center gs-sys-intro">
+            <h2 class="section-title">Autonomous Workflows</h2>
+            <p class="section-subtitle" style="margin: 1rem auto 0 auto;">Not a simple chatbot. We build autonomous AI agents that reason, decide, and act on your behalf.</p>
+        </div>
+        
+        <div class="container grid systems-grid">
+            <div class="sys-card gs-sys fade-up">
+                <div class="sys-icon"><i data-lucide="message-square"></i></div>
+                <h3>AI Lead Agent</h3>
+                <p>Responds to new inquiries within 60 seconds, personalizes follow-ups, and auto-nurtures leads until they book a trial.</p>
+            </div>
+            
+            <div class="sys-card gs-sys fade-up">
+                <div class="sys-icon"><i data-lucide="calendar-x"></i></div>
+                <h3>No-Show Recovery</h3>
+                <p>Detects missed classes, sends personalized recovery messages, and escalates repeat no-shows directly to you.</p>
+            </div>
+
+            <div class="sys-card gs-sys fade-up">
+                <div class="sys-icon"><i data-lucide="shield-alert"></i></div>
+                <h3>Churn Prevention</h3>
+                <p>Monitors member behavior, scores risk levels, and triggers personalized outreach before members actually cancel.</p>
+            </div>
+            
+            <div class="sys-card gs-sys fade-up">
+                <div class="sys-icon"><i data-lucide="star"></i></div>
+                <h3>Review Autopilot</h3>
+                <p>Identifies the perfect moment based on member milestones and sentiment to automatically generate 5-star Google reviews.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Tags Grid Section -->
+    <section class="industries-apple section-padding" id="industries">
+        <div class="container section-header text-center ind-header gs-ind-head">
+            <h2 class="ind-title">Built For Results</h2>
+            <p class="section-subtitle">We bring Tesla-grade systems engineering to your industry.</p>
+        </div>
+        <div class="container bg-tags-container mt-4 gs-ind-tags">
+            <div class="industry-tag"><i data-lucide="dumbbell"></i> Independent Gyms</div>
+            <div class="industry-tag"><i data-lucide="activity"></i> CrossFit Studios</div>
+            <div class="industry-tag"><i data-lucide="heart"></i> Yoga Studios</div>
+            <div class="industry-tag"><i data-lucide="users"></i> Personal Training</div>
+            <div class="industry-tag"><i data-lucide="shopping-bag"></i> Retail Boutiques</div>
+            <div class="industry-tag"><i data-lucide="scissors"></i> Salons</div>
+            <div class="industry-tag"><i data-lucide="sparkles"></i> Med Spas</div>
+            <div class="industry-tag"><i data-lucide="activity"></i> Chiropractors</div>
+        </div>
+    </section>
+
+    <!-- Pricing / Risk Free -->
+    <section class="pricing-apple section-padding" id="pricing">
+        <div class="container grid align-center pricing-grid">
+            <div class="pricing-text-dynamic">
+                <h2 class="section-title">The Grand Slam Offer</h2>
+                <div class="feature-row d-feat-1">
+                    <i data-lucide="check-circle-2" class="icon-success"></i>
+                    <span>Engineer-designed workflows driving measurable KPIs.</span>
+                </div>
+                <div class="feature-row d-feat-2">
+                    <i data-lucide="check-circle-2" class="icon-success"></i>
+                    <span>60-Day Full Setup Refund Guarantee. We take the risk.</span>
+                </div>
+                <div class="feature-row d-feat-3">
+                    <i data-lucide="check-circle-2" class="icon-success"></i>
+                    <span>System live within 2 weeks of signing.</span>
+                </div>
+            </div>
+            <div class="pricing-card-3d glass-card">
+                <div class="card-badge">Zero Risk</div>
+                <h3 class="card-title">Full System Build</h3>
+                <div class="card-price">$2,500 <span style="font-size: 1.2rem; color: #94A3B8;">Setup</span></div>
+                <p class="card-subtitle">$500/mo Retainer for Ongoing Optimization.</p>
+                <a href="#contact" class="btn btn-primary btn-block">Claim Your Free Audit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form with Parallax -->
+    <section class="contact-parallax section-padding" id="contact">
+        <div class="container max-sm">
+            <div class="section-header text-center contact-header">
+                <h2 class="section-title">Claim Your Free Operations Audit</h2>
+                <form class="lead-form" id="auditForm">
+                    <input type="hidden" name="access_key" value="ccd52759-7130-4cd9-a878-c1785b9c2e1b">
+                    <input type="hidden" name="subject" value="New CMX Lead: Free Operations Audit Requested!">
+                    <div class="form-group">
+                        <label for="gymName">Business Name</label>
+                        <input type="text" id="gymName" name="gymName" required placeholder="e.g. Iron Forge Fitness">
+                    </div>
+                    <div class="form-group">
+                        <label for="memberName">Contact Name</label>
+                        <input type="text" id="memberName" name="memberName" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="owner@gym.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="painPoint">Biggest Operational Bottleneck</label>
+                        <select id="painPoint" name="painPoint" required style="width:100%; padding:1rem; border-radius:0.5rem; background:rgba(255,255,255,0.05); border:1px solid var(--border-color); color:var(--text-main);">
+                            <option value="">Select an option...</option>
+                            <option value="Lead Follow-up">Following up with new leads fast enough</option>
+                            <option value="No-Shows">High no-show rates for booked trials</option>
+                            <option value="Retention">Tracking members and preventing cancellations</option>
+                            <option value="Admin Work">Too much manual data entry across systems</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="apple-btn primary-btn w-100" id="submitBtn">
+                        Request Free Audit ->
+                    </button>
+                </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="assets/logo_transparent.png" alt="CMX Logic Logo" style="height: 24px;" id="footerLogo">
+                </div>
+                <p>Systems Engineering & Agentic AI.</p>
+            </div>
+            <div class="footer-links">
+                <p>&copy; 2026 CMX Logic. All rights reserved.</p>
+                <p>Huntsville, AL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
