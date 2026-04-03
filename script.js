@@ -65,9 +65,33 @@ document.addEventListener("DOMContentLoaded", () => {
     mTl.to(".m1", { y: 0, opacity: 1, filter: "blur(0px)", scale: 1, duration: 1 })
         .to(".m2", { y: 0, opacity: 1, filter: "blur(0px)", scale: 1, duration: 1 }, "-=0.4");
 
-    // 3. Systems Grid Reveal
+    // 3. Stats Bar Number Counters
+    const statsItems = document.querySelectorAll(".stat-number");
+    statsItems.forEach(stat => {
+        let updateCount = { val: 0 };
+        let target = parseInt(stat.getAttribute("data-target"), 10);
+        let suffix = stat.getAttribute("data-suffix") || "";
+        let prefix = stat.getAttribute("data-prefix") || "";
+
+        gsap.to(updateCount, {
+            val: target,
+            duration: 2,
+            ease: "power2.out",
+            roundProps: "val",
+            onUpdate: function() {
+                stat.innerText = prefix + updateCount.val + suffix;
+            },
+            scrollTrigger: {
+                trigger: ".stats-section",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+    });
+
+    // 4. Systems Grid Reveal
     gsap.from(".gs-sys-intro", {
-        y: 40,
+        y: 0, scale: 0.95,
         opacity: 0,
         duration: 0.8,
         ease: "power2.out",
@@ -79,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     gsap.from(".fade-up", {
-        y: 20, /* Reduced significantly to prevent massive misalignment gaps during animation */
+        y: 0, scale: 0.95,
         opacity: 0,
         stagger: 0.10,
         duration: 0.6,
@@ -93,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 4. Industry Tags Reveal
     gsap.from(".gs-ind-head", {
-        y: 30,
+        y: 0, scale: 0.95,
         opacity: 0,
         duration: 0.8,
         ease: "power2.out",
@@ -106,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const indTags = gsap.utils.toArray(".industry-tag");
     gsap.from(indTags, {
-        y: 20,
+        y: 0, scale: 0.95,
         opacity: 0,
         stagger: 0.05,
         duration: 0.5,
@@ -120,12 +144,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 5. How It Works Reveal
     gsap.from(".gs-hiw-intro", {
-        y: 40, opacity: 0, duration: 0.8, ease: "power2.out",
+        y: 0, scale: 0.95, opacity: 0, duration: 0.8, ease: "power2.out",
         scrollTrigger: { trigger: ".hiw-section", start: "top 80%", toggleActions: "play none none reverse" }
     });
 
     gsap.from(".gs-hiw-step", {
-        y: 30, opacity: 0, stagger: 0.15, duration: 0.7, ease: "power2.out",
+        y: 0, scale: 0.95, opacity: 0, stagger: 0.15, duration: 0.7, ease: "power2.out",
         scrollTrigger: { trigger: ".hiw-flow", start: "top 85%", toggleActions: "play none none reverse" }
     });
 
